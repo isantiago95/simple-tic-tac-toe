@@ -1,0 +1,92 @@
+body {
+  text-align: center;
+  height: 100vh;
+  color: #eee;
+  background-color: #13293d;
+  font-family: 'Montserrat';
+}
+
+body,
+body .board,
+#game-zone {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  gap: 4em;
+}
+
+#game-zone {
+  flex-direction: row;
+}
+
+.loading {
+  width: 108px;
+  height: 108px;
+  filter: invert(96%) sepia(0%) saturate(7499%) hue-rotate(297deg) brightness(102%) contrast(103%);
+  animation: rotating 1.2s linear infinite;
+}
+
+@keyframes rotating {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.results strong {
+  font-weight: bold;
+  font-size: 1.3em;
+  color: yellow;
+}
+.success {
+  color: green !important;
+  font-weight: bolder;
+}
+.danger {
+  color: red !important;
+  font-weight: bolder;
+}
+
+#result {
+  padding: 2em;
+  background-color: darkslateblue;
+}
+
+#score {
+  padding: 2em;
+  background-color: darkgreen;
+}
+
+#play-options {
+  display: flex;
+  justify-content: space-between;
+  gap: 3em;
+}
+#play-options button {
+  padding: 1em;
+  border-radius: 50%;
+}
+#play-options button:hover {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+  body,
+  body .board,
+  #game-zone {
+    gap: 2em;
+  }
+  img,
+  .loading {
+    width: 4em;
+    height: auto;
+  }
+  #result,
+  #score {
+    padding: 1em;
+    height: 3em;
+  }
+}

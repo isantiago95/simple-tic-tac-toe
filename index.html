@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="images/scissors.png" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Hello world! Hope you can enjoy this simple tic tac toe game" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="www.hi.israelsantiago.com/tic-tac-toe" />
+    <meta property="og:title" content="A Simple Tic Tac Toe Game" />
+    <meta
+      property="og:description"
+      content="Hello world! Hope you can enjoy this simple tic tac toe game" />
+    <meta
+      property="og:image"
+      key="og:image"
+      content="https://media.israelsantiago.com/my-space.jpg" />
+    <meta property="og:image" key="og:image" content="%PUBLIC_URL%/my-space.jpg" />
+
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap"
+      rel="stylesheet" />
+  </head>
+  <body>
+    <div class="board">
+      <section id="game-zone">
+        <figure>
+          <figcaption>Your choice</figcaption>
+          <img id="playerChoice" src="images/rock.png" alt="user choice" />
+        </figure>
+        <figure>
+          <figcaption>Computer choice</figcaption>
+          <img id="computerChoice" src="images/rock.png" alt="computer choice" />
+        </figure>
+      </section>
+
+      <section class="results">
+        <p id="result">You won by choosing <strong>scissors</strong> VS <strong>paper</strong></p>
+        <p id="score">
+          You have won <strong id="player-won">0</strong> times. You have lost
+          <strong id="player-lost">0</strong> times.
+        </p>
+      </section>
+
+      <section id="play-options">
+        <button data-choice="rock"><img src="images/rock.png" alt="play using rock" /></button>
+        <button data-choice="paper"><img src="images/paper.png" alt="play using paper" /></button>
+        <button data-choice="scissors">
+          <img src="images/scissors.png" alt="play using scissors" />
+        </button>
+      </section>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
